@@ -7,6 +7,11 @@ export default {
     install (_opt) {
         var $hasTouch = 'ontouchstart' in window;
         let $opt = _opt;
+        // 开启动画监听
+        document.addEventListener('',function(e){
+
+        });
+
         document.addEventListener(($hasTouch ? 'touchstart' : 'mousedown'), function (e) {
             var $that = e.target;
             // 判断是否处于diasbled状态
