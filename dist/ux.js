@@ -1,19 +1,24 @@
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    (global.UX = factory());
+}(this, (function () { 'use strict';
+
 /**
  * 动效库
  */
-import animation from './directory/animation';
-let str = ['ux-animation', '_act'];
-export default {
-    install (_opt) {
+var str = ['ux-animation', '_act'];
+var index = {
+    install: function install(_opt) {
         var $hasTouch = 'ontouchstart' in window;
-        let $opt = _opt;
+        var $opt = _opt;
         // 开启动画监听
-        document.addEventListener('transitionend',function(e){
+        document.addEventListener('transitionend', function (e) {
             var $that = e.target;
             $that.classList.remove($that.dataset[str[0]] + str[1]);
         });
 
-        document.addEventListener(($hasTouch ? 'touchstart' : 'mousedown'), function (e) {
+        document.addEventListener($hasTouch ? 'touchstart' : 'mousedown', function (e) {
             var $that = e.target;
             // 判断是否处于diasbled状态
             if ($that.disabled) return;
@@ -25,3 +30,7 @@ export default {
         });
     }
 };
+
+return index;
+
+})));
