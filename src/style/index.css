@@ -1,0 +1,22 @@
+.ux-animation {
+  transition-duration: .5s;
+  -webkit-transition-duration: .5s;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  outline: none;
+}
+.base_act {
+  opacity: .6;
+}
+.scale {
+  transform: scale(1);
+  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+}
+.scale_act {
+  transform: scale(0.9);
+}
+[disabled='disabled'] {
+  background-color: #ccc;
+  color: #fff;
+}

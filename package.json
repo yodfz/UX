@@ -1,0 +1,31 @@
+{
+  "name": "ux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yodfz/UX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yodfz/UX/issues"
+  },
+  "homepage": "https://github.com/yodfz/UX#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "babelrc-rollup": "^3.0.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1"
+  }
+}

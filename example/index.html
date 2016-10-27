@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="../dist/ux.js"></script>
+    <link rel="stylesheet" href="../src/style/index.css">
+    <style>
+        .baseUX{
+            border:0px;
+            height:30px;
+            background: #0ef;
+        }
+    </style>
 </head>
 <body>
-
+<button data-ux-animation="base" class="baseUX">baseUX</button>
+<button data-ux-animation="scale">scale</button>
+<button data-ux-animation="base" disabled="disabled">disable button</button>
+<script>
+    UX.install();
+</script>
 </body>
 </html>
