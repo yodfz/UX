@@ -10,7 +10,9 @@ export default {
         // 开启动画监听
         document.addEventListener('transitionend', function (e) {
             var $that = e.target;
-            $that.classList.remove($that.dataset[str[0]] + str[1]);
+            if ($that.className.indexOf('ux-animation') > -1) {
+                $that.classList.remove($that.dataset[str[0]] + str[1]);
+            }
         });
 
         document.addEventListener(($hasTouch ? 'touchstart' : 'mousedown'), function (e) {
