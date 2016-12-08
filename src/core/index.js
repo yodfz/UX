@@ -7,13 +7,17 @@ export default {
     install (_opt) {
         var $hasTouch = 'ontouchstart' in window;
         let $opt = _opt;
-        // 开启动画监听
-        document.addEventListener('transitionend', function (e) {
+        function end(e){
             var $that = e.target;
             if ($that.className.indexOf('ux-animation') > -1) {
                 $that.classList.remove($that.dataset[str[0]] + str[1]);
             }
-        });
+        }
+        // 开启动画监听webkitTransitionEnd
+        document.addEventListener('transitionend', end);
+        document.addEventListener('webkitTransitionEnd', end);
+        document.addEventListener('animationend', end);
+        document.addEventListener('webkitAnimationEnd', end);
 
         document.addEventListener(($hasTouch ? 'touchstart' : 'mousedown'), function (e) {
             var $that = e.target;
